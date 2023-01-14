@@ -6,7 +6,7 @@ services:
   haproxy:
     build: ./haproxy
     ports:
-      - "80:80"
+      - "8486:80"
     depends_on:
       - apache1
       - apache2
@@ -46,7 +46,7 @@ services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     ports:
-      - '8080:80'
+      - '8085:80'
     restart: always
     environment:
         PMA_HOST: db
